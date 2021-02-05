@@ -59,30 +59,38 @@ namespace PanchenkoFilm
         {
             this.BackgroundImage = Properties.Resources.fon;
         }
-        private void pictureBox1_MouseClick(object sender, EventArgs e)
+        private void pictureBox1_DoubleClick(object sender, EventArgs e)
         {
-            Form Start = new Form();
-            Start.Show();
+            //Form Start = new Form();
+            //Start.Show();
+            MessageBox.Show("1");
         }
-        private void pictureBox2_MouseClick(object sender, EventArgs e)
+        //private void pictureBox1_On(object sender, EventArgs e)
+        //{ 
+        //}
+        private void pictureBox2_Clicked(object sender, EventArgs e)
         {
-            Form Start = new Form();
-            Start.Show();
+            //Form Start = new Form();
+            //Start.Show();
+            MessageBox.Show("2");
         }
-        private void pictureBox3_MouseClick(object sender, EventArgs e)
+        private void pictureBox3_Clicked(object sender, EventArgs e)
         {
-            Form Start = new Form();
-            Start.Show();
+            //Form Start = new Form();
+            //Start.Show();
+            MessageBox.Show("3");
         }
-        private void pictureBox4_MouseClick(object sender, EventArgs e)
+        private void pictureBox4_Clicked(object sender, EventArgs e)
         {
-            Form Start = new Form();
-            Start.Show();
+            //Form Start = new Form();
+            //Start.Show();
+            MessageBox.Show("4");
         }
-        private void pictureBox5_MouseClick(object sender, EventArgs e)
+        private void pictureBox5_Clicked(object sender, EventArgs e)
         {
-            Form Start = new Form();
-            Start.Show();
+            //Form Start = new Form();
+            //Start.Show();
+            MessageBox.Show("5");
         }
 
         private void Form1_Load_1(object sender, EventArgs e)
