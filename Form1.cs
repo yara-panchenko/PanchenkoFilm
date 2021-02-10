@@ -22,12 +22,11 @@ namespace PanchenkoFilm
             this.BackgroundImage = Properties.Resources.fon2;
             this.BackgroundImageLayout = ImageLayout.Stretch;
             InitializeComponent();
-            pictureBox1.Size = new Size(150, 150);
-            pictureBox2.Size = new Size(150, 150);
-            pictureBox3.Size = new Size(150, 150);
-            pictureBox4.Size = new Size(150, 150);
-            pictureBox5.Size = new Size(150, 150);
-
+            pictureBox1.Size = new Size(160, 326);
+            pictureBox2.Size = new Size(160, 326);
+            pictureBox3.Size = new Size(160, 326);
+            pictureBox4.Size = new Size(160, 326);
+            pictureBox5.Size = new Size(160, 326);
 
             pictureBox1.Image = Properties.Resources.avengers;
             pictureBox2.Image = Properties.Resources.sherlock;
@@ -36,11 +35,10 @@ namespace PanchenkoFilm
             pictureBox5.Image = Properties.Resources.thor;
 
             pictureBox1.Location = new Point(173, 57);
-            pictureBox2.Location = new Point(323, 57);
-            pictureBox3.Location = new Point(473, 57);
-            pictureBox4.Location = new Point(623, 57);
-            pictureBox5.Location = new Point(773, 57);
-
+            pictureBox2.Location = new Point(333, 57);
+            pictureBox3.Location = new Point(493, 57);
+            pictureBox4.Location = new Point(653, 57);
+            pictureBox5.Location = new Point(813, 57);
 
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -48,54 +46,53 @@ namespace PanchenkoFilm
             pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox5.SizeMode = PictureBoxSizeMode.StretchImage;
 
-
             this.Controls.Add(pictureBox1);
             this.Controls.Add(pictureBox2);
             this.Controls.Add(pictureBox3);
             this.Controls.Add(pictureBox4);
             this.Controls.Add(pictureBox5);
+
+            pictureBox1.Click += PictureBox1_Click;
+            pictureBox2.Click += PictureBox2_Click;
+            pictureBox3.Click += PictureBox3_Click;
+            pictureBox4.Click += PictureBox4_Click;
+            pictureBox5.Click += PictureBox5_Click;
+
+        }
+        private void PictureBox1_Click(object sender, EventArgs e)
+        {
+            
+            Form Saalid = new Form();
+            Saalid.Show();
+        }
+
+        private void PictureBox2_Click(object sender, EventArgs e)
+        {
+            Form Saalid = new Form();
+            Saalid.Show();
+
+        }
+        private void PictureBox3_Click(object sender, EventArgs e)
+        {
+            Form Saalid = new Form();
+            Saalid.Show();
+
+        }
+        private void PictureBox4_Click(object sender, EventArgs e)
+        {
+            Form Saalid = new Form();
+            Saalid.Show();
+
+        }
+        private void PictureBox5_Click(object sender, EventArgs e)
+        {
+            Form Saalid = new Form();
+            Saalid.Show();
+
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-            this.BackgroundImage = Properties.Resources.fon;
-        }
-        private void pictureBox1_DoubleClick(object sender, EventArgs e)
-        {
-            //Form Start = new Form();
-            //Start.Show();
-            MessageBox.Show("1");
-        }
-        //private void pictureBox1_On(object sender, EventArgs e)
-        //{ 
-        //}
-        private void pictureBox2_Clicked(object sender, EventArgs e)
-        {
-            //Form Start = new Form();
-            //Start.Show();
-            MessageBox.Show("2");
-        }
-        private void pictureBox3_Clicked(object sender, EventArgs e)
-        {
-            //Form Start = new Form();
-            //Start.Show();
-            MessageBox.Show("3");
-        }
-        private void pictureBox4_Clicked(object sender, EventArgs e)
-        {
-            //Form Start = new Form();
-            //Start.Show();
-            MessageBox.Show("4");
-        }
-        private void pictureBox5_Clicked(object sender, EventArgs e)
-        {
-            //Form Start = new Form();
-            //Start.Show();
-            MessageBox.Show("5");
-        }
 
-        private void Form1_Load_1(object sender, EventArgs e)
-        {
-
-        }
+        }     
     }
 }
