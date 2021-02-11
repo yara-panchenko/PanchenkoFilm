@@ -139,10 +139,10 @@
     <None Include="Resources\yellow.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Filmid.mdf">
+    <Content Include="AppData\Filmid.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Filmid_log.ldf">
+    <Content Include="AppData\Filmid_log.ldf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Filmid.mdf</DependentUpon>
     </Content>

@@ -14,14 +14,30 @@ namespace PanchenkoFilm
     {
         public int i = 0, j = 0;
         ListBox saalide_list;
+        private SqlDataAdapter adapter;
+
         public Start()
         {
+            con = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename =|DataDirectory|\AppData\Filmid.mdf; Integrated Security = True");
+            this.Text = "Super Kino";
+            this.BackgroundImage = "";
+            this.Size = new Size(360, 300);
+            con.Open();
+            Saalide_adapter = new SqlDataAdapter("Select Saalinimetus FROM Saalid_tabel", con);
+            DataTable salid_tabel = new DataTable();
+            Saalide_adapter.Fill(salid_tabel);
             saalide_list = new ListBox();
             saalide_list.Location = new Point(10, 10);
-            saalide_list.Items.Add("Vali saal");
-            saalide_list.Items.Add("Väike");
-            saalide_list.Items.Add("Keskmine");
-            saalide_list.Items.Add("Suur");
+            saalide_list.Font = new Font(DefaultFont.FontFamily, 14);
+            saalide_list.Size = new Size(150, 30);
+            foreach (DataRow row in salid_tabel.Rows)
+            {
+                saalide_list.Items.Add(row["Saalinimetus"]);
+            }
+            //saalide_list.Items.Add("Vali saal");
+            //saalide_list.Items.Add("Väike");
+            //saalide_list.Items.Add("Keskmine");
+            //saalide_list.Items.Add("Suur");
             this.Controls.Add(saalide_list);
         }
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
